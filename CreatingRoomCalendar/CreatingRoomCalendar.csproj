@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Behavior\EditorLayoutBehavior - Copy %282%29.cs" />
+    <Compile Remove="Behavior\EditorLayoutBehavior - Copy.cs" />
+    <Compile Remove="View\CustomResourceItemView.xaml.cs" />
+    <Compile Remove="View\HomePage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="SchedulerPage.xaml" />
+    <EmbeddedResource Remove="View\CustomResourceItemView.xaml" />
+    <EmbeddedResource Remove="View\EditorLayout - Copy.xaml" />
+    <EmbeddedResource Remove="View\HomePage.xaml" />
+    <EmbeddedResource Remove="View\SchedulerPage - Copy.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="View\CustomResourceItemView.xaml" />
+    <None Remove="View\HomePage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.SfSchedule" Version="18.3.1.44" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="View\SchedulerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\SchedulerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
