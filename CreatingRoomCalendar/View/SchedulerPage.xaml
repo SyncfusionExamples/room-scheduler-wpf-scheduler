@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms"
+             xmlns:local="clr-namespace:ScheduleGettingStarted" 
+             x:Class="ScheduleGettingStarted.SchedulerPage" 
+             Title="MEETING ROOM CALENDAR">
+
+    <ContentPage.BindingContext>
+        <local:SchedulerViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <DataTemplate x:Key="CustomResourceTemplate">
+            <StackLayout BackgroundColor="{Binding Color}">
+            <Grid Margin="20,20,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label 
+                        Grid.Row="2" Grid.Column="0"
+                        x:Name="lbl_seats" Text="Seats" TextColor="White"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End" FontSize="Small">
+                        <Label.FontSize>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="iOS">7</On>
+                                <On Platform="Android">7</On>
+                                <On Platform="WPF">10</On>
+                                <On Platform="UWP">10</On>
+                            </OnPlatform>
+                        </Label.FontSize>
+                    </Label>
+                <Label Grid.Row="2" Grid.Column="1" x:Name="lbl_capacity"
+                       Text="{Binding Capacity}"
+                       BackgroundColor="LightGray"
+                       TextColor="Black"
+                       VerticalTextAlignment="Center" WidthRequest="5" HeightRequest="5"
+                       HorizontalTextAlignment="Center">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">11</On>
+                            <On Platform="Android">11</On>
+                            <On Platform="WPF">11</On>
+                            <On Platform="UWP">11</On>
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
+                    <Label x:Name="lbl_roomname" Text="{Binding Name}" TextColor="White"
+                       Grid.Row="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" 
+                           FontSize="Small" FontAttributes="Bold">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">14</On>
+                            <On Platform="Android">14</On>
+                            <On Platform="WPF">14</On>
+                            <On Platform="UWP">14</On>
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
+                    <Label x:Name="lbl_roomtype" Text="{Binding RoomType}" TextColor="White"
+                       Grid.Row="1" Grid.ColumnSpan="2" HorizontalTextAlignment="Start" FontSize="Small">
+                    <Label.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS">7</On>
+                            <On Platform="Android">7</On>
+                            <On Platform="WPF">10</On>
+                            <On Platform="UWP">10</On>
+                        </OnPlatform>
+                    </Label.FontSize>
+                </Label>
+            </Grid>
+            </StackLayout>
+        </DataTemplate>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+            <Grid>
+            <syncfusion:SfSchedule x:Name="schedule"
+                    ShowAppointmentsInline="False" 
+                    DataSource="{Binding Meetings}"                  
+                    ScheduleView = "TimelineView" 
+                    ShowResourceView="True"
+                    ScheduleResources="{Binding MeetingRooms}"
+                    AllowAppointmentDrag="True"
+                    TimeIntervalHeight="-1"                               
+                    MinDisplayDate="{Binding MinimumDate}"                       
+                    ResourceItemTemplate="{StaticResource CustomResourceTemplate}"
+                    ResourceViewMode="Absolute">
+                    <syncfusion:SfSchedule.TimelineViewSettings>
+                        <syncfusion:TimelineViewSettings
+                               StartHour="9" 
+                               EndHour="18">
+                        </syncfusion:TimelineViewSettings>
+                    </syncfusion:SfSchedule.TimelineViewSettings>
+                    <syncfusion:SfSchedule.SpecialTimeRegions>
+                        <syncfusion:TimeRegionSettings 
+                                StartHour="13" 
+                                EndHour="14" 
+                                Text="Lunch"
+                                CanEdit="False"
+                                Color="#EAEAEA"
+                                TextColor="Black"/>
+                    </syncfusion:SfSchedule.SpecialTimeRegions>
+                    <syncfusion:SfSchedule.AppointmentMapping>
+                        <syncfusion:ScheduleAppointmentMapping
+                                ColorMapping="Color"
+                                EndTimeMapping="To"
+                                StartTimeMapping="From"
+                                SubjectMapping="EventName"
+                                IsAllDayMapping="IsAllDay"
+                                RecurrenceRuleMapping="RecurrenceRule"     
+                                ResourceIdsMapping="ResourceIdCollection"/>
+                    </syncfusion:SfSchedule.AppointmentMapping>
+
+                    <syncfusion:SfSchedule.ResourceMapping>
+                        <syncfusion:ResourceMapping 
+                                         Name="Name"
+                                         Id="Id"
+                                         Color="Color"/>
+                    </syncfusion:SfSchedule.ResourceMapping>
+                </syncfusion:SfSchedule>
+                <local:EditorLayout
+                x:Name="editor"
+                IsVisible="False" />
+            </Grid>
+    </ContentPage.Content>
+    <ContentPage.Behaviors>
+        <local:SchedulerPageBehavior/>
+    </ContentPage.Behaviors>
+</ContentPage>
