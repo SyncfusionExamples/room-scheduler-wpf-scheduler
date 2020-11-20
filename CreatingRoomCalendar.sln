@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreatingRoomCalendar", "CreatingRoomCalendar\CreatingRoomCalendar.csproj", "{0275EE02-48FF-47DE-8F67-3D1F0E688BAE}"
 EndProject
@@ -9,6 +9,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingRoomCalendar.WPF", "CreatingRoomCalendar.WPF\CreatingRoomCalendar.WPF.csproj", "{CFE98985-759C-4F86-85E1-016BD9FF5CB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingRoomCalendar.Android", "CreatingRoomCalendar.Android\CreatingRoomCalendar.Android.csproj", "{875512DE-A657-454E-B867-611D4491C963}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingRoomCalendar.iOS", "CreatingRoomCalendar.iOS\CreatingRoomCalendar.iOS.csproj", "{ECCA5902-C028-46B3-A2B9-8D2914129F48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -334,6 +336,58 @@ Global
 		{875512DE-A657-454E-B867-611D4491C963}.Release-Xml|x86.ActiveCfg = Release|Any CPU
 		{875512DE-A657-454E-B867-611D4491C963}.Release-Xml|x86.Build.0 = Release|Any CPU
 		{875512DE-A657-454E-B867-611D4491C963}.Release-Xml|x86.Deploy.0 = Release|Any CPU
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|ARM.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|ARM.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|iPhone.ActiveCfg = Debug|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|iPhone.Build.0 = Debug|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|x64.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|x64.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|x86.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Ad-Hoc|x86.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|ARM.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|ARM.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|iPhone.ActiveCfg = Debug|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|iPhone.Build.0 = Debug|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|x64.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|x64.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|x86.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.AppStore|x86.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Debug|ARM.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Debug|iPhone.Build.0 = Debug|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Debug|x64.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Debug|x86.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release|ARM.ActiveCfg = Release|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release|iPhone.ActiveCfg = Release|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release|iPhone.Build.0 = Release|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release|x64.ActiveCfg = Release|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release|x86.ActiveCfg = Release|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|ARM.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|ARM.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|iPhone.ActiveCfg = Release|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|iPhone.Build.0 = Release|iPhone
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|x64.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|x64.Build.0 = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|x86.ActiveCfg = Debug|iPhoneSimulator
+		{ECCA5902-C028-46B3-A2B9-8D2914129F48}.Release-Xml|x86.Build.0 = Debug|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
